@@ -1,0 +1,50 @@
+<mat-sidenav-container>
+  <mat-sidenav-content class="mat-drawer-content mat-sidenav-content login-div">
+    <div class="login-container" style="top: 25%; max-width: 400px;">
+      <img src="/assets/images/login/Group.svg" style="display: block; margin: auto; width: 50%; height: 50%;">
+      <h1>Login</h1>
+      <h2>Please login to get your local AQI data.</h2>
+      <form>
+        
+        <div style="position: relative; width: 100%;">
+          <input type="email" placeholder="Your email address" style="padding-left: 40px; width: 100%; color: #1C1C1E; opacity: 52%;" />
+          <img src="/assets/images/login/pre.svg" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">
+        </div>     
+
+        <div style="position: relative; width: 100%;">
+          <input 
+            [type]="isPasswordVisible ? 'email' : 'password'" 
+            placeholder="Your password" 
+            style="padding-left: 40px; padding-right: 40px; width: 100%; color:#1C1C1E; opacity: 52%;" />
+        
+          <img src="/assets/images/login/key.svg" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">           
+          <button type="button" (click)="togglePasswordVisibility()" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+            <img 
+              [src]="isPasswordVisible ? '/assets/images/login/eye-svg.svg' : '/assets/images/login/eye-svg.svg'" 
+              alt="Toggle password visibility" 
+              style="width: 20px; height: 20px;">
+          </button>
+        </div>
+        
+  
+        <div class="actions">
+          <label>
+            <input type="checkbox" class="form-check-input" id="same-address">  
+            <label class="form-check-label" for="same-address">Remember me</label>
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Login</button>
+        <p style="color: #6B7280;">Don't have an account? <a href="#">Signup</a></p>
+        <p style="color: #9CA3AF;">Or login with</p>
+        <div>
+          <button class="google-login" style="display: flex; align-items: center; gap: 8px; width: 100%;">
+            <img src="/assets/images/login/google-logo.svg" alt="Google Logo" style="width: 20px; height: 20px;">
+            Login with Google
+          </button>          
+        </div>
+      </form>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  
