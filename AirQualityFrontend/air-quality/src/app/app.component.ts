@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Используйте CommonModule
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatSidenavModule],
+  imports: [
+    CommonModule,        // Замените BrowserModule на CommonModule
+    MatSidenavModule,
+    RouterOutlet,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'] // исправлено на styleUrls
+  styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
   title = 'air-quality';
