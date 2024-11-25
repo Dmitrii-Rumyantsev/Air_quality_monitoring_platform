@@ -1,0 +1,43 @@
+<mat-sidenav-container>
+    <mat-sidenav-content class="mat-drawer-content mat-sidenav-content login-div">
+      <div class="login-container" style="top: 25%; max-width: 400px;">
+        <img src="/assets/images/login/Group.svg" style="display: block; margin: auto; width: 50%; height: 50%;">
+        <h1>Signup</h1>
+        <h2>Please signup to get your local AQI data.</h2>
+        <form>
+          
+          <div style="position: relative; width: 100%;">
+            <input 
+              type="text" 
+              placeholder="Your username" 
+              style="padding-left: 40px; width: 100%; color: #1C1C1E; opacity: 52%;" 
+              [(ngModel)]="username"
+              name="username"/>
+            <img src="/assets/images/signup/User.svg" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">
+          </div>     
+  
+          <div style="position: relative; width: 100%;">
+            <input 
+              type="email"
+              placeholder="Your email adress" 
+              style="padding-left: 40px; padding-right: 40px; width: 100%; color:#1C1C1E; opacity: 52%;" 
+              [(ngModel)]="email"
+              name="email"/>
+          
+            <img src="/assets/images/login/pre.svg" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">           
+          </div>
+          
+          <button type="button" (click)="toggleSubmit()">Signup</button>
+          <p style="color: #6B7280;">Have an account? <a href="#">Login</a></p>
+          <p style="color: #9CA3AF;">Or login with</p>
+          <div>
+            <button class="google-login" style="display: flex; align-items: center; gap: 8px; width: 100%;">
+              <img src="/assets/images/login/google-logo.svg" alt="Google Logo" style="width: 20px; height: 20px;">
+              Login with Google
+            </button>          
+          </div>
+        </form>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+    
